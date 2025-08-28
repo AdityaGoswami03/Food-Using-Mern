@@ -12,6 +12,7 @@ function App() {
         <p>Yes, I know it is running!</p>
 
         <p>git pushpa</p>
+        <p> Tujse jyada hoshiyar hu m...Jyada bnega na to bta dungi ache se..!</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
