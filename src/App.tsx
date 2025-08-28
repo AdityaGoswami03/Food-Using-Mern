@@ -10,6 +10,8 @@ function App() {
       <div>
         <p>hello is it running</p>
         <p>Yes, I know it is running!</p>
+
+        <p>git pushpa</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
