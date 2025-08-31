@@ -8,11 +8,7 @@ function App() {
   return (
     <>
       <div>
-        <p>hello is it running</p>
-        <p>Yes, I know it is running!</p>
-
-        <p>git pushpa</p>
-        <p> Tujse jyada hoshiyar hu m...Jyada bnega na to bta dungi ache se..!</p>
+        <p>lets start</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
