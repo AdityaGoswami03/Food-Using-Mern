@@ -1,6 +1,8 @@
 // import { useState } from 'react'
 
-import "./App.css";
+// import "./App.css";
+import Home from "./screen/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -8,11 +10,8 @@ function App() {
   return (
     <>
       <div>
-        <p>lets start</p>
+        <Home></Home>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
