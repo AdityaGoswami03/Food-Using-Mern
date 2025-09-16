@@ -1,8 +1,10 @@
-const express = require("express");
+import express from "express";
+import connectDB from "./db.js";   // 👈 note the .js extension when using ES modules
+
 const app = express();
 const port = 9090;
 
-const connectDB = require("./db");
+// connect to MongoDB
 connectDB();
 
 app.get("/", (req, res) => {
@@ -10,5 +12,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Exapmle app listening on port ${port}`);
+  console.log(`✅ Example app listening on port ${port}`);
 });
