@@ -15,7 +15,7 @@ export interface ApiResponse<T = unknown> {
 
 export const authService = {
   async register(payload: RegisterPayload): Promise<ApiResponse> {
-    const response = await fetch(`${API_BASE_URL}/createuser`, {
+    const response = await fetch(`${API_BASE_URL}/create-user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
