@@ -9,6 +9,7 @@ interface LoginResponse {
     id: string;
     name: string;
     email: string;
+    role?: string;
   };
 }
 
@@ -56,6 +57,9 @@ export default function Login() {
         if (data.user) {
           localStorage.setItem("userEmail", data.user.email);
           localStorage.setItem("userName", data.user.name);
+          if (data.user.role) {
+            localStorage.setItem("userRole", data.user.role);
+          }
         }
       }
 

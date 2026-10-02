@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Home from "./screen/Home";
 import Login from "./screen/Login";
 import SignUp from "./screen/SignUp";
+import AddFood from "./screen/AddFood";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
+import AdminRoute from "./components/AdminRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -53,6 +55,16 @@ function App() {
               <ProtectedRoute>
                 <Home />
               </ProtectedRoute>
+            }
+          />
+
+          {/* Admin Protected Add Food Route */}
+          <Route
+            path="/add-food"
+            element={
+              <AdminRoute>
+                <AddFood />
+              </AdminRoute>
             }
           />
 

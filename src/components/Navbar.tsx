@@ -1,15 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
+import { isAdmin, clearAuth } from "../utils/auth";
 
 function Navbar() {
   const navigate = useNavigate();
   const token = localStorage.getItem("authToken");
   const userName = localStorage.getItem("userName");
+  const userIsAdmin = isAdmin();
 
   const handleLogout = () => {
-    localStorage.removeItem("authToken");
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userName");
+    clearAuth();
     navigate("/login");
+  };
+  const handleAddFood = () => {
+    navigate("/add-food");
   };
 
   return (
@@ -43,6 +46,11 @@ function Navbar() {
             {token ? (
               <>
                 {userName && <span className="text-light small">Hi, {userName}</span>}
+                {userIsAdmin && (
+                  <button className="btn btn-outline-success btn-sm" onClick={handleAddFood}>
+                    + Add Food
+                  </button>
+                )}
                 <button className="btn btn-outline-danger btn-sm" onClick={handleLogout}>
                   Logout
                 </button>
